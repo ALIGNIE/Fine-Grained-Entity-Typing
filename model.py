@@ -25,7 +25,7 @@ class GradMultiply(Function):
 def grad_multiply(x, lambd=1):
     return GradMultiply.apply(x, lambd)
 
-class PromptNER(RobertaPreTrainedModel):
+class ALIGNIE(RobertaPreTrainedModel):
     _keys_to_ignore_on_save = [r"lm_head.decoder.weight", r"lm_head.decoder.bias"]
     _keys_to_ignore_on_load_missing = [r"position_ids", r"lm_head.decoder.weight", r"lm_head.decoder.bias"]
     _keys_to_ignore_on_load_unexpected = [r"pooler"]
