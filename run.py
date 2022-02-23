@@ -442,7 +442,7 @@ if __name__ == "__main__":
             new_instances = pos_data[7]
             test_data = read_file_and_hier(test_file, new_hier, old_hier, train_type_count, use_node_list=True)
             for j in range(1):
-                model = PromptNER.from_pretrained('roberta-base', label_num=len(node_id_list))
+                model = ALIGNIE.from_pretrained('roberta-base', label_num=len(node_id_list))
                 model.init_project(node_id_list, output_num=len(node_id_list), new_instances=new_instances)
                 device = torch.device("cuda")
                 model.to(device)
